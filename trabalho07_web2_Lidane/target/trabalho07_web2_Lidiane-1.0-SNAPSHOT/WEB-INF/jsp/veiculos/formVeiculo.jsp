@@ -26,7 +26,7 @@
 
                 <legend style="width: 220px">Cadastro de Veículos</legend>
 
-                <form class="needs-validation" novalidate action="${linkTo[VeiculoController].salvar}">
+                <form class="needs-validation" novalidate action="${linkTo[VeiculosController].salvar}">
                     <div class="form-row">
                         <div class="col-md-4 mb-3">
                             <input type="hidden" name="veiculo.id" value="${veiculo.id}"/>

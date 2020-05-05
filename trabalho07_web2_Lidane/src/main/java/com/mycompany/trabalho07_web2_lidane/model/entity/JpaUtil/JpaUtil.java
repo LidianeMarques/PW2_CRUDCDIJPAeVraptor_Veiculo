@@ -51,7 +51,7 @@ public class JpaUtil {
      * EntityManager na anotação @Inject.
      */
     @Produces
-    public static EntityManager manager(EntityManagerFactory factory) {
+    public  EntityManager manager(EntityManagerFactory factory) {
         return factory.createEntityManager();
     }
     
@@ -64,7 +64,7 @@ public class JpaUtil {
      *
      * @param factory
      */
-    public static void close(@Disposes EntityManagerFactory factory) {
+    public  void close(@Disposes EntityManagerFactory factory) {
         factory.close();
     }
 

@@ -25,7 +25,7 @@ public class ClientesController {
 
     public void formCliente() {
     }
-
+    
     public List<Cliente> listaClientes() {
 
         //Retorna uma lista de Clientes do BD, usando o ClienteDao.
