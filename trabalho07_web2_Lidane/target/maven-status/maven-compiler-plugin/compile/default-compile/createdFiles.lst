@@ -1,0 +1,10 @@
+com\mycompany\trabalho07_web2_lidane\model\dao\ClienteDao.class
+com\mycompany\trabalho07_web2_lidane\model\entity\Cliente.class
+com\mycompany\trabalho07_web2_lidane\controller\ClientesController.class
+com\mycompany\trabalho07_web2_lidane\controller\VeiculoController.class
+com\mycompany\trabalho07_web2_lidane\model\entity\Veiculo.class
+com\mycompany\trabalho07_web2_lidane\controller\LocacaoController.class
+com\mycompany\trabalho07_web2_lidane\model\entity\JpaUtil\JpaUtil.class
+com\mycompany\trabalho07_web2_lidane\model\dao\LocacaoDao.class
+com\mycompany\trabalho07_web2_lidane\model\dao\VeiculoDao.class
+com\mycompany\trabalho07_web2_lidane\model\entity\Locacao.class
