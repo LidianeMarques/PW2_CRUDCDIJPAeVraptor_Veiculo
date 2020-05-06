@@ -6,8 +6,9 @@
  */
 package com.mycompany.trabalho07_web2_lidane.model.entity;
 
+
 import java.io.Serializable;
-import java.sql.Date;
+import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -15,7 +16,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
-import javax.persistence.Table;
+import javax.persistence.Table; 
 
 /**
  *
@@ -28,9 +29,11 @@ public class Locacao implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-
+ 
     private Date dataInicio;
+     
     private Date dataFim;
+    
     private int quantDiarias;
 
     @ManyToOne
@@ -57,7 +60,8 @@ public class Locacao implements Serializable {
 
     /**
      * @return the dataInicio
-     */
+     */ 
+    
     public Date getDataInicio() {
         return dataInicio;
     }

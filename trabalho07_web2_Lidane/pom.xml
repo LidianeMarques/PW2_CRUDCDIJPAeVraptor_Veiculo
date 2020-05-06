@@ -40,7 +40,7 @@
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-entitymanager</artifactId>
             <version>4.3.1.Final</version>
-        </dependency>
+        </dependency> 
         
     </dependencies>
 
