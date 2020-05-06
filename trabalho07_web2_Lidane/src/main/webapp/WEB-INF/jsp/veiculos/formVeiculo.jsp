@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Cadastro de Veiculo</title>
+        <title>Cadastro de Veículo</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -24,7 +24,7 @@
                       border-color: threedface;
                       border-image: initial;">
 
-                <legend style="width: 220px">Cadastro de Veículos</legend>
+                <legend style="width: 230px">Cadastro de Veículos</legend>
 
                 <form class="needs-validation" novalidate action="${linkTo[VeiculosController].salvar}">
                     <div class="form-row">
@@ -36,6 +36,9 @@
                             <div class="valid-feedback">
                                 Muito bom!
                             </div>
+                            <div class="invalid-feedback">
+                                Não pode ficar em branco!
+                            </div>
                         </div>
                         <div class="col-md-4 mb-3">
                             <label for="validationCustom02">Modelo</label>
@@ -43,6 +46,9 @@
                                    name="veiculo.modelo" value="${veiculo.modelo}" required>
                             <div class="valid-feedback">
                                 Muito bom!
+                            </div>
+                            <div class="invalid-feedback">
+                                Não pode ficar em branco!
                             </div>
                         </div>
                         <div class="col-md-4 mb-3">
@@ -52,13 +58,21 @@
                             <div class="valid-feedback">
                                 Muito bom!
                             </div>
+                            <div class="invalid-feedback">
+                                Não pode ficar em branco!
+                            </div>
                         </div>
+                    </div>
+                    <div class="form-row">
                         <div class="col-md-4 mb-3">
                             <label for="validationCustom04">Ano</label>
                             <input type="text" class="form-control" id="validationCustom04" 
                                    name="veiculo.ano" value="${veiculo.ano}" required>
                             <div class="valid-feedback">
                                 Muito bom!
+                            </div>
+                            <div class="invalid-feedback">
+                                Não pode ficar em branco!
                             </div>
                         </div>
                         <div class="col-md-4 mb-3">
@@ -67,6 +81,9 @@
                                    name="veiculo.placa" value="${veiculo.placa}" required>
                             <div class="valid-feedback">
                                 Muito bom!
+                            </div>
+                            <div class="invalid-feedback">
+                                Não pode ficar em branco!
                             </div>
                         </div>
                         <div class="col-md-4 mb-3">
@@ -80,15 +97,41 @@
                                 <div class="valid-feedback">
                                     Muito bom!
                                 </div>
+                                <div class="invalid-feedback">
+                                    Não pode ficar em branco!
+                                </div>
                             </div>
                         </div>
+                    </div>
 
-                        <button class="btn btn-success btn-block" type="submit">Salvar</button>
+                    <button class="btn btn-success btn-block" type="submit">Salvar</button>
+                    <a href="/trabalho07_web2_Lidane/index.html"  class="btn btn-primary btn-block" 
+                       role="button">Página Inicial
+                    </a>
+
                     </div>
                 </form>
-                <a href="/trabalho07_web2_Lidane/index.html"  class="btn btn-primary btn-block" role="button">Pagina Inicial</a>
             </fieldset>
         </div>
-
+        <script>
+            // Example starter JavaScript for disabling form submissions if there are invalid fields
+            (function () {
+                'use strict';
+                window.addEventListener('load', function () {
+                    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                    var forms = document.getElementsByClassName('needs-validation');
+                    // Loop over them and prevent submission
+                    var validation = Array.prototype.filter.call(forms, function (form) {
+                        form.addEventListener('submit', function (event) {
+                            if (form.checkValidity() === false) {
+                                event.preventDefault();
+                                event.stopPropagation();
+                            }
+                            form.classList.add('was-validated');
+                        }, false);
+                    });
+                }, false);
+            })();
+        </script>
     </body>
 </html>

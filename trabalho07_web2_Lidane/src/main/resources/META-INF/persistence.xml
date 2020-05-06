@@ -4,7 +4,7 @@
     <provider>org.hibernate.ejb.HibernatePersistence</provider>
     <class>com.mycompany.trabalho07_web2_lidane.model.entity.Cliente</class>
     <class>com.mycompany.trabalho07_web2_lidane.model.entity.Locacao</class>
-    <class>com.mycompany.trabalho07_web2_lidane.model.entity.Veiculo</class>
+    <class>com.mycompany.trabalho07_web2_lidane.model.entity.Veiculo</class> 
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/PW2_trabalho07_TbVeiculo"/>

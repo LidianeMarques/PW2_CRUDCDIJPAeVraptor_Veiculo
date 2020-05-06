@@ -42,7 +42,8 @@
                             <label>Telefone </label>
                             <input type="text" class="form-control" id="telefone"  
                                    maxlength="15" name="cliente.telefone"  value="${cliente.telefone}" 
-                                   placeholder="(99) 9999-9999"  required="required" pattern="\([0-9]{2}\) [0-9]{4,6}-[0-9]{3,4}$" />
+                                   placeholder="(99) 9999-9999"  required="required" 
+                                   pattern="\([0-9]{2}\) [0-9]{4,6}-[0-9]{3,4}$" />
                             <div class="invalid-feedback">
                                 Digite o número corretamente!
                             </div>
@@ -51,7 +52,8 @@
 
                     <button class="btn btn-success btn-block" type="submit">Salvar</button>
                 </form>
-                <a href="/trabalho07_web2_Lidane/index.html"  class="btn btn-primary btn-block" role="button">Pagina Inicial</a>
+                <a href="/trabalho07_web2_Lidane/index.html"  class="btn btn-primary btn-block"
+                   role="button">Página Inicial</a>
             </fieldset>
         </div>
 

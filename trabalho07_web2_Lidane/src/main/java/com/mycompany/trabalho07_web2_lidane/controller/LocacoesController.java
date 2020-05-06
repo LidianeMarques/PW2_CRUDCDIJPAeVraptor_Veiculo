@@ -8,7 +8,9 @@ package com.mycompany.trabalho07_web2_lidane.controller;
 
 import br.com.caelum.vraptor.Controller;
 import br.com.caelum.vraptor.Result;
+import com.mycompany.trabalho07_web2_lidane.model.dao.ClienteDao;
 import com.mycompany.trabalho07_web2_lidane.model.dao.LocacaoDao;
+import com.mycompany.trabalho07_web2_lidane.model.dao.VeiculoDao;
 import com.mycompany.trabalho07_web2_lidane.model.entity.Locacao;
 import java.util.List;
 import javax.inject.Inject;
@@ -19,11 +21,22 @@ import javax.inject.Inject;
  */
 @Controller
 public class LocacoesController {
-    
+
     @Inject
     LocacaoDao locacaoDao;
+    @Inject
+    ClienteDao daoCliente;
+    @Inject
+    VeiculoDao daoVeiculo;
+    @Inject
+    private Result result;
     
     public void formLocacao() {
+        List listaClientes = daoCliente.buscarClientes();
+        this.result.include("listaCliente", listaClientes);
+
+        List listaVeiculos = daoVeiculo.buscarVeiculos();
+        this.result.include("listaVeiculo", listaVeiculos);
     }
 
     public List<Locacao> listaLocacoes() {
@@ -31,7 +44,7 @@ public class LocacoesController {
         //Retorna uma lista de Locacoes do BD, usando o LocacaoDao.
         return locacaoDao.buscarLocacoes();
     }
-    
+
     public void salvar(Locacao locacao, Result result) {
         //Gravar os dados no banco e depois chamar o metodo listaLocacoes para listar os objetos no banco.
 
@@ -42,9 +55,14 @@ public class LocacoesController {
         }
         result.redirectTo(this).listaLocacoes();
     }
-    
-    public void editar(int id, Result result) {
 
+    public void editar(int id, Result result) {
+        List listaClientes = daoCliente.buscarClientes();
+        result.include("listaCliente", listaClientes);
+
+        List listaVeiculos = daoVeiculo.buscarVeiculos();
+        result.include("listaVeiculo", listaVeiculos);
+        
         //Buscar o locacao no banco o registro para editar pelo id
         Locacao locacao = locacaoDao.buscarLocacao(id);
         //Incluir o objeto locacao no formLocacao
@@ -52,8 +70,8 @@ public class LocacoesController {
         //Redirecionar para o formLocacao.jsp
         result.of(this).formLocacao();
     }
-    
-     public void excluir(Integer id, Result result) {
+
+    public void excluir(Integer id, Result result) {
 
         locacaoDao.deletar(id);
         result.redirectTo(this).listaLocacoes();
