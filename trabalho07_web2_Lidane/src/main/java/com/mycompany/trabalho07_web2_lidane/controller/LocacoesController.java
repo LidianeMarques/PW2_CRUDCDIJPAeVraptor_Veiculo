@@ -45,7 +45,7 @@ public class LocacoesController {
         return locacaoDao.buscarLocacoes();
     }
 
-    public void salvar(Locacao locacao, Result result) {
+    public void salvar(Locacao locacao) {
         //Gravar os dados no banco e depois chamar o metodo listaLocacoes para listar os objetos no banco.
 
         if (locacao.getId() == null) {
@@ -56,7 +56,7 @@ public class LocacoesController {
         result.redirectTo(this).listaLocacoes();
     }
 
-    public void editar(int id, Result result) {
+    public void editar(int id) {
         List listaClientes = daoCliente.buscarClientes();
         result.include("listaCliente", listaClientes);
 
@@ -71,7 +71,7 @@ public class LocacoesController {
         result.of(this).formLocacao();
     }
 
-    public void excluir(Integer id, Result result) {
+    public void excluir(Integer id) {
 
         locacaoDao.deletar(id);
         result.redirectTo(this).listaLocacoes();
