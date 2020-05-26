@@ -1,0 +1,15 @@
+com\mycompany\trabalho7_web2_lidiane\model\entity\Veiculo.class
+ValidacaoVraptor\numeroTelefone.class
+com\mycompany\trabalho7_web2_lidiane\controller\ClientesController.class
+com\mycompany\trabalho7_web2_lidiane\controller\LocacoesController.class
+com\mycompany\trabalho7_web2_lidiane\model\dao\VeiculoDao.class
+com\mycompany\trabalho7_web2_lidiane\model\dao\ClienteDao.class
+com\mycompany\trabalho7_web2_lidiane\model\entity\Locacao_.class
+com\mycompany\trabalho7_web2_lidiane\model\entity\Cliente_.class
+com\mycompany\trabalho7_web2_lidiane\model\entity\JpaUtil\JpaUtil.class
+com\mycompany\trabalho7_web2_lidiane\model\entity\Veiculo_.class
+ValidacaoVraptor\validacaoData.class
+com\mycompany\trabalho7_web2_lidiane\model\entity\Cliente.class
+com\mycompany\trabalho7_web2_lidiane\model\entity\Locacao.class
+com\mycompany\trabalho7_web2_lidiane\controller\VeiculosController.class
+com\mycompany\trabalho7_web2_lidiane\model\dao\LocacaoDao.class
