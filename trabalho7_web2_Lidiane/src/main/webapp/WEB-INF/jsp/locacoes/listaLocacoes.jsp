@@ -26,10 +26,10 @@
             <thead>
                 <tr>
                     <th scope="col">Cliente</th>
-                    <th scope="col">Carro</th>
-                    <th scope="col">Quantidade de Diárias</th>
+                    <th scope="col">Carro</th>                    
                     <th scope="col">Data de Início</th>
                     <th scope="col">Data de Fim</th>
+                    <th scope="col">Quantidade de Diárias</th>
                     <th scope="col" colspan="2">Opções</th>
                 </tr>
             </thead>
@@ -37,10 +37,10 @@
                 <c:forEach items="${locacaoList}" var="locacao">
                     <tr>
                         <td>${locacao.cliente.nome}</td>
-                        <td>${locacao.veiculo.modelo}</td>
-                        <td>${locacao.quantDiarias}</td> 
+                        <td>${locacao.veiculo.modelo}</td>                        
                         <td> <fmt:formatDate value="${locacao.dataInicio}" type="date" pattern="dd/MM/yyyy" /></td>
                         <td> <fmt:formatDate value="${locacao.dataFim}" type="date" pattern="dd/MM/yyyy" /></td>
+                        <td>${locacao.quantDiarias}</td> 
                         <td> 
                             <a onclick="confirmacao('${locacao.id}')" href="javascript:func()"  
                                class="btn btn-danger btn-block" role="button">Excluir

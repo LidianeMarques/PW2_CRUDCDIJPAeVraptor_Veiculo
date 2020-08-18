@@ -8,11 +8,9 @@ package com.mycompany.trabalho7_web2_lidiane.model.entity;
 
 import ValidacaoVraptor.validacaoData;
 import java.io.Serializable;
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.time.temporal.ChronoUnit;
-import java.util.Calendar;
 import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

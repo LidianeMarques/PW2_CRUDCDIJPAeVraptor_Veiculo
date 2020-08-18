@@ -7,7 +7,9 @@
 package com.mycompany.trabalho7_web2_lidiane.model.entity;
 
 import ValidacaoVraptor.numeroTelefone;
+import com.sun.javafx.scene.control.skin.VirtualFlow;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -38,7 +40,7 @@ public class Cliente implements Serializable {
     private String telefone;
 
     @OneToMany(mappedBy = "cliente")
-    private List<Locacao> locacoes;
+    private List<Locacao> locacoes = new ArrayList();
 
     /**
      * @return the id

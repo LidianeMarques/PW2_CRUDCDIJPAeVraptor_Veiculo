@@ -12,7 +12,9 @@ import br.com.caelum.vraptor.validator.Validator;
 import com.mycompany.trabalho7_web2_lidiane.model.dao.ClienteDao;
 import com.mycompany.trabalho7_web2_lidiane.model.dao.LocacaoDao;
 import com.mycompany.trabalho7_web2_lidiane.model.dao.VeiculoDao;
+import com.mycompany.trabalho7_web2_lidiane.model.entity.Cliente;
 import com.mycompany.trabalho7_web2_lidiane.model.entity.Locacao;
+import com.mycompany.trabalho7_web2_lidiane.model.entity.Veiculo;
 import java.util.List;
 import javax.inject.Inject;
 
@@ -35,11 +37,11 @@ public class LocacoesController {
     Validator validator;
     
     public void formLocacao() {
-        List listaClientes = daoCliente.buscarClientes();
-        this.result.include("listaCliente", listaClientes);
+        List<Cliente> listaClientes= daoCliente.buscarClientes();
+        result.include("listaCliente", listaClientes);
 
-        List listaVeiculos = daoVeiculo.buscarVeiculos();
-        this.result.include("listaVeiculo", listaVeiculos);
+        List<Veiculo> listaVeiculos = daoVeiculo.buscarVeiculos();
+        result.include("listaVeiculo", listaVeiculos);
     }
 
     public List<Locacao> listaLocacoes() {
@@ -65,10 +67,10 @@ public class LocacoesController {
     }
 
     public void editar(int id) {
-        List listaClientes = daoCliente.buscarClientes();
+        List<Cliente> listaClientes  = daoCliente.buscarClientes();
         result.include("listaCliente", listaClientes);
 
-        List listaVeiculos = daoVeiculo.buscarVeiculos();
+        List <Veiculo> listaVeiculos = daoVeiculo.buscarVeiculos();
         result.include("listaVeiculo", listaVeiculos);
         
         //Buscar o locacao no banco o registro para editar pelo id

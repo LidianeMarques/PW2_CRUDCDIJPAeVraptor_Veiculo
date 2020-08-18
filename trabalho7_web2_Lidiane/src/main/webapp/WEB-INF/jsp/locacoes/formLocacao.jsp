@@ -76,18 +76,6 @@
                             </div>
                         </div>
 
-                        <div class="col-md-4 mb-3">
-                            <label for="validationCustom03">Quantidade de Diárias</label>
-                            <input type="text" class="form-control" id="validationCustom03"
-                                   name="locacao.quantDiarias" value="${locacao.quantDiarias}" required="">
-
-                            <div class="valid-feedback">
-                                Muito bom!
-                            </div>
-                            <div class="invalid-feedback">
-                                Não pode ficar em branco!
-                            </div>
-                        </div>
                     </div>
 
                     <div class="form-row">
@@ -120,6 +108,19 @@
                                 Digite a data corretamente!
                             </div>
                         </div>
+                            
+<!--                        <div class="col-md-4 mb-3">
+                            <label for="validationCustom03">Quantidade de Diárias</label>
+                            <input type="text" class="form-control" id="validationCustom03"
+                                   name="locacao.quantDiarias" value="${locacao.quantDiarias}" required="">
+
+                            <div class="valid-feedback">
+                                Muito bom!
+                            </div>
+                            <div class="invalid-feedback">
+                                Não pode ficar em branco!
+                            </div>
+                        </div>-->
 
                         <button class="btn btn-success btn-block" type="submit">Salvar</button>
                         <a href="/trabalho7_web2_Lidiane/index.html"  

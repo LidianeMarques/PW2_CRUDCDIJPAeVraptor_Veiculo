@@ -11,7 +11,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
@@ -45,7 +44,7 @@ public class Veiculo implements Serializable {
     @NotNull(message = "{obrigatorio}")
     private int ano;
 
-    @OneToOne(mappedBy = "veiculo")
+    //@OneToOne(mappedBy = "veiculo")
     private Locacao locacao;
 
     /**
