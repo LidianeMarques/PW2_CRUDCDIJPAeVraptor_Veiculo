@@ -102,9 +102,11 @@ public class Locacao implements Serializable {
     public int getQuantDiarias() {
 
         if (this.dataInicio != null && this.dataFim != null && quantDiarias <= 0) {
+            //Aqui estou convertendo um objeto date em LocalDate
             LocalDate data1 = this.dataInicio.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
             LocalDate data2 = this.dataFim.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
-
+            
+            //Preciso de um objeto LocalDate para calcular os dias entre as datas.
             this.quantDiarias = (int) this.diasEntreDatas(data1, data2);
         } else {
             return 0;
@@ -121,10 +123,16 @@ public class Locacao implements Serializable {
             LocalDate data1 = this.dataInicio.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
             LocalDate data2 = this.dataFim.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
             this.quantDiarias = (int) this.diasEntreDatas(data1, data2);
+            
         } else {
             this.quantDiarias = quantDiarias;
         }
 
+    }
+    
+    public long diasEntreDatas(LocalDate data1, LocalDate data2) {
+        long intervalo = ChronoUnit.DAYS.between(data1, data2);
+        return intervalo;
     }
 
     /**
@@ -155,8 +163,5 @@ public class Locacao implements Serializable {
         this.veiculo = veiculo;
     }
 
-    public long diasEntreDatas(LocalDate data1, LocalDate data2) {
-        long intervalo = ChronoUnit.DAYS.between(data1, data2);
-        return intervalo;
-    }
+    
 }

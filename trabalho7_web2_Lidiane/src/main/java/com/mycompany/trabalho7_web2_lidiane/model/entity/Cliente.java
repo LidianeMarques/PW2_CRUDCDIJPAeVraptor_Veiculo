@@ -7,7 +7,6 @@
 package com.mycompany.trabalho7_web2_lidiane.model.entity;
 
 import ValidacaoVraptor.numeroTelefone;
-import com.sun.javafx.scene.control.skin.VirtualFlow;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -18,7 +17,6 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Pattern;
 
 /**
  *

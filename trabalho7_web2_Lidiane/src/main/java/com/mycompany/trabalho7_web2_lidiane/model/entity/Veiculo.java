@@ -45,7 +45,7 @@ public class Veiculo implements Serializable {
     private int ano;
 
     //@OneToOne(mappedBy = "veiculo")
-    private Locacao locacao;
+   // private Locacao locacao;
 
     /**
      * @return the id
@@ -103,19 +103,19 @@ public class Veiculo implements Serializable {
         this.valorDiaria = valorDiaria;
     }
 
-    /**
-     * @return the locacao
-     */
-    public Locacao getLocacao() {
-        return locacao;
-    }
-
-    /**
-     * @param locacao the locacao to set
-     */
-    public void setLocacao(Locacao locacao) {
-        this.locacao = locacao;
-    }
+//    /**
+//     * @return the locacao
+//     */
+//    public Locacao getLocacao() {
+//        return locacao;
+//    }
+//
+//    /**
+//     * @param locacao the locacao to set
+//     */
+//    public void setLocacao(Locacao locacao) {
+//        this.locacao = locacao;
+//    }
 
     /**
      * @return the tipo

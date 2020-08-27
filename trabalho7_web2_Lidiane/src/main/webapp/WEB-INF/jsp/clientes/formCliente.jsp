@@ -70,8 +70,8 @@
         </div>
     </body>
 
-    <!--        <script>
-                // Example starter JavaScript for disabling form submissions if there are invalid fields
+            <script>
+                // Bootstrap Example starter JavaScript for disabling form submissions if there are invalid fields
                 (function () {
                     'use strict';
                     window.addEventListener('load', function () {
